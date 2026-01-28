@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unlock Rare Brainrot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 🔵 ROBLOX-STYLE SKY BACKGROUND (OPTION 2) */
+    body {
+      background-color: #7dd3fc;
+      background-image:
+        radial-gradient(circle at 20% 20%, #ffffff55 0 60px, transparent 61px),
+        radial-gradient(circle at 80% 30%, #ffffff55 0 80px, transparent 81px),
+        radial-gradient(circle at 50% 70%, #ffffff44 0 100px, transparent 101px),
+        linear-gradient(to bottom, #60a5fa, #e0f2fe);
+      background-attachment: fixed;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 420px;
+      width: 100%;
+      background: rgba(2, 6, 23, 0.92);
+      backdrop-filter: blur(6px);
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #ef4444;
+      color: #fff;
+      font-weight: bold;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: #22c55e;
+    }
+
+    p {
+      font-size: 15px;
+      color: #cbd5f5;
+      margin-bottom: 16px;
+    }
+
+    .rewards {
+      display: flex;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .reward {
+      flex: 1;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 10px;
+    }
+
+    .reward img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .reward span {
+      display: block;
+      margin-top: 6px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .countdown-box {
+      background: #020617;
+      border: 1px solid #ef4444;
+      border-radius: 12px;
+      padding: 12px;
+      margin: 18px 0;
+    }
+
+    .countdown-title {
+      font-size: 13px;
+      color: #fca5a5;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    .timer {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ef4444;
+    }
+
+    .input-box {
+      margin: 16px 0;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #1e293b;
+      background: #020617;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    input::placeholder {
+      color: #64748b;
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: linear-gradient(90deg, #22c55e, #16a34a);
+      color: #000;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .reviews {
+      margin-top: 22px;
+      text-align: left;
+    }
+
+    .review {
+      display: flex;
+      gap: 10px;
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+
+    .review img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+
+    .stars {
+      color: #facc15;
+      font-size: 12px;
+    }
+
+    .note {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #94a3b8;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="badge">⚠ LAST CODE AVAILABLE</div>
+
+    <h1>
+      Unlock a <span class="highlight">Rare Brainrot</span><br>
+      Before It Expires
+    </h1>
+
+    <p>
+      Enter your username and verify quickly
+      before the code expires.
+    </p>
+
+    <div class="rewards">
+      <div class="reward">
+        <img src="brainrot1.png">
+        <span>Ultra Rare</span>
+      </div>
+      <div class="reward">
+        <img src="brainrot2.png">
+        <span>Legendary</span>
+      </div>
+      <div class="reward">
+        <img src="brainrot3.png">
+        <span>Secret</span>
+      </div>
+    </div>
+
+    <div class="countdown-box">
+      <div class="countdown-title">⏳ Code expires in</div>
+      <div class="timer" id="timer">05:00</div>
+    </div>
+
+    <div class="input-box">
+      <input type="text" placeholder="Enter your game username">
+    </div>
+
+    <button onclick="goToOffer()">UNLOCK NOW 🚀</button>
+
+    <div class="reviews">
+      <div class="review">
+        <img src="avatar1.png">
+        <div>
+          <strong>PlayerMax</strong>
+          <div class="stars">★★★★★</div>
+          Got it right before timer ended.
+        </div>
+      </div>
+
+      <div class="review">
+        <img src="avatar2.png">
+        <div>
+          <strong>BrainrotKid</strong>
+          <div class="stars">★★★★★</div>
+          Hurry, it works.
+        </div>
+      </div>
+
+      <div class="review">
+        <img src="avatar3.png">
+        <div>
+          <strong>NeoPlays</strong>
+          <div class="stars">★★★★☆</div>
+          Almost missed it 😭
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      Anti-bot verification • One code per player • Limited availability
+    </div>
+  </div>
+
+  <script>
+    let time = 300;
+    const timerEl = document.getElementById("timer");
+
+    setInterval(() => {
+      let m = Math.floor(time / 60);
+      let s = time % 60;
+      timerEl.textContent =
+        String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+      if (time > 0) time--;
+    }, 1000);
+
+    function goToOffer() {
+      window.location.href = "https://YOUR-CPA-OFFER-LINK.com";
+    }
+  </script>
+
+</body>
+</html>
