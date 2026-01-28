@@ -259,14 +259,25 @@
   </div>
 
  <script>
-function goToOffer() {
-  const s = document.createElement("script");
-  s.src = "https://playabledownloads.com/script_include.php?pid=1871515";
-  document.body.appendChild(s);
-}
-</script>
+    let time = 300;
+    const timerEl = document.getElementById("timer");
+
+    setInterval(() => {
+      let m = Math.floor(time / 60);
+      let s = time % 60;
+      timerEl.textContent =
+        String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+      if (time > 0) time--;
+    }, 1000);
+
+    function goToOffer() {
+      window.location.href ="https://googl.com" ;
+    }
+  </script>
+   <script type="text/javascript" src="https://playabledownloads.com/script_include.php?id=1871515"></script>
 </body>
 </html>
+
 
 
 
